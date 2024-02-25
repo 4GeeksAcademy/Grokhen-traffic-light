@@ -27,7 +27,7 @@
     width: 300px;
     height: 300px;
     border-radius: 50%;
-    background-color: red;
+    background-color: darkred;
     margin: 5px;
 }
 
@@ -35,17 +35,24 @@
     width: 300px;
     height: 300px;
     border-radius: 50%;
-    background-color: yellow;
+    background-color: darkgoldenrod;
     margin: 5px;
 }
+
 
 .green {
     width: 300px;
     height: 300px;
     border-radius: 50%;
-    background-color: green;
+    background-color: darkgreen;
     margin: 5px;
 }
+
+.bright {
+    background-color: purple;
+}
+
+
 /* 
 
     You can write your own styles here...

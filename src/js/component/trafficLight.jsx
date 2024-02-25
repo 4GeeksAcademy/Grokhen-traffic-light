@@ -1,16 +1,38 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Light from "./light";
+import RedLight from "./redLight";
+import YellowLight from "./yellowLight";
+import GreenLight from "./greenLight";
 
 
-const color = ["red", "yellow", "green"]
+
 
 
 const TrafficLight = () => {
+	const [red, setRed] = useState("red")
+	const [yellow, setYellow] = useState("yellow")
+	const [green, setGreen] = useState("green")
+	const onHandleBright = (color) => {
+		console.log("luz ", color );
+			if (color === red) {
+				setGreen("green");
+				setYellow("yellow");
+				setRed("red" + " " + "bright")
+			} else if (color === yellow) {
+				setGreen("green");
+				setYellow("yellow" + " " + "bright");
+				setRed("red");
+			} else {
+				setGreen("green" + " " + "bright");
+				setYellow("yellow");
+				setRed("red");
+			}
+	}
 	return (
 		<div className="trafficLight mt-5">
-			<Light color = {color[0]}/>
-			<Light color = {color[1]}/>
-			<Light color = {color[2]}/>
+			<RedLight color={red} onHandleBright={onHandleBright} />
+			<YellowLight color={yellow} onHandleBright={onHandleBright} />
+			<GreenLight color={green} onHandleBright={onHandleBright} />
 		</div>
 	);
 };

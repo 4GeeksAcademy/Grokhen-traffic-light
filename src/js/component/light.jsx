@@ -1,13 +1,11 @@
 import React from "react";
 
 
-const Light = ({color}) => {
+const Light = ({color, onHandleBright}) => {
     return (
 
-        <div className={color}>
-
+        <div className={color} onClick={onHandleBright(color)}>
         </div>
-
 
     )
 }
