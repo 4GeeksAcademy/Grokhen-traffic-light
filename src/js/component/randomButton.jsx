@@ -1,8 +1,8 @@
 import React from "react";
 
-const RandomButton = () => {
+const RandomButton = ({onHandleRandom}) => {
     return(
-        <button type="button" className="randomButton mt-4">Cambiar de color</button>
+        <button type="button" className="randomButton mt-4" onClick={()=> onHandleRandom()}>Cambiar de color</button>
     )
 }
 

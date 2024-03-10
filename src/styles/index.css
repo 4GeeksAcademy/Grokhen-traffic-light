@@ -49,6 +49,14 @@
     margin: 5px;
 }
 
+.mysteryColor {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: purple;
+    margin: 5px;
+}
+
 .bright {
     filter: brightness(150%);
     box-shadow: 0 0 35px white;
@@ -66,6 +74,3 @@
     width: 150px;
 }
 
-.mysteryLight {
-    background-color: purple;
-}
